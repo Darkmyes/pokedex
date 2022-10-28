@@ -1,13 +1,13 @@
 import React from "react"
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import axios from "axios";
 
-import Generation from "../../generations/components/generation";
+import Generation from "../components/generation";
 import PokedexLayout from "../../common/layouts/pokedexLayout";
 
 const baseURL = "https://pokeapi.co/api/v2";
 
-const Generations = () => {
+const GenerationsPage = () => {
 
     const [generations, setGenerations] = React.useState<any>([]);
 
@@ -20,6 +20,7 @@ const Generations = () => {
                 .then(res => {
                     let generationsArray = res.map(resp => {
                         return {
+                            id: resp.data.id,
                             name: resp.data.name,
                             region: resp.data.main_region.name,
                             url: "/generation/" + resp.data.id
@@ -36,20 +37,18 @@ const Generations = () => {
 
     return (
         <PokedexLayout>
-            <Container>
-                <Grid className="flex justify-center" container spacing={2}>
-                    {generations.map((element: any, index: number) => 
-                        <Grid item xs={10} sm={4} md={3} >
-                            <Generation
-                                key={index}
-                                generation={element}
-                            ></Generation>
-                        </Grid>                
-                    )}
-                </Grid>            
-            </Container>
+            <Grid className="flex justify-center" container spacing={2}>
+                {generations.map((element: any, index: number) => 
+                    <Grid item xs={10} sm={6} md={4} >
+                        <Generation
+                            key={index}
+                            generation={element}
+                        ></Generation>
+                    </Grid>                
+                )}
+            </Grid>
         </PokedexLayout>
     )
 }
 
-export default Generations
+export default GenerationsPage

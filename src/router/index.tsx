@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Routes } from "react-router-dom"
-import Generations from '../generations/pages/generations';
+import GenerationsPage from '../generations/pages/generationsPage';
+import GenerationPage from '../generations/pages/generationPage';
 
 import { IndexPage } from "./../common/pages"
 
@@ -8,7 +9,8 @@ const RouterComponent = () => {
     return (
         <Routes>
             <Route path="/" element={<IndexPage/>}></Route>
-            <Route path="/generations" element={<Generations/>}></Route>
+            <Route path="/generations" element={<GenerationsPage/>}></Route>
+            <Route path="/generation/:id" element={<GenerationPage/>}></Route>
         </Routes>
     );
 }

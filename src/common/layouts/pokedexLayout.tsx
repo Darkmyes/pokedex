@@ -1,9 +1,12 @@
 import React from "react"
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
 
 import "./pokedexLayout.css"
 
 const PokedexLayout: React.FC<any> = ({ children }) => {
+    const navigate = useNavigate();
 
     return (
         <Box className="pokedex-background" sx={{backgroundColor: '#bef5ff', display: 'flex', height: '100vh', alignItems: 'center', justifyContent: 'center'}}>            
@@ -29,7 +32,16 @@ const PokedexLayout: React.FC<any> = ({ children }) => {
                 <div className="pokedex-center-line"></div>
                 <div className="pokedex-center-semi-circle-bottom-inner"></div>
             </div>
-            { children }
+            <div className="pokedex-container">
+                { children }
+                <Button
+                    onClick={() => history.length > 2 ? navigate(-1) : navigate("/")}
+                    className="pokedex-back-button pokedex-button initial-hidden show-late"
+                    aria-label="add"
+                >
+                    <KeyboardReturnIcon></KeyboardReturnIcon>
+                </Button>       
+            </div>
         </Box>
     )
 }
