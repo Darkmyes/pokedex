@@ -2,9 +2,9 @@ import React from "react"
 import { Grid } from "@mui/material";
 import axios from "axios";
 
-import Generation from "../components/generation";
 import PokedexLayout from "../../common/layouts/pokedexLayout";
 import { useParams } from "react-router-dom";
+import PokemonCard from "../../pokemon/components/pokemonCard";
 
 const baseURL = "https://pokeapi.co/api/v2";
 const imgBaseURL = "https://www.serebii.net/pokemongo/pokemon/";
@@ -21,7 +21,7 @@ const GenerationPage: React.FC<any> = (props) => {
         axios.get(baseURL + "/generation/" + id).then(async (response: any) => {
             let pokemonRequests = response.data.pokemon_species
                 .map(
-                (pokemon: any) => axios.get(pokemon.url));
+                (pokemon: any) => axios.get(pokemon.url.replace("pokemon-species", "pokemon")));
             
             Promise.all(pokemonRequests)
                 .then( (res: any) => {                    
@@ -37,6 +37,8 @@ const GenerationPage: React.FC<any> = (props) => {
                             id: resp.data.id,
                             name: resp.data.name,
                             color: resp.data.color,
+                            types: resp.data.types,
+                            sprites: resp.data.sprites,
                             img_url: imgBaseURL + extraZeros + resp.data.id + ".png",
                             img_url2: imgBaseURL2 + resp.data.name.replace(" ", "-") + ".svg"
                         };
@@ -56,13 +58,8 @@ const GenerationPage: React.FC<any> = (props) => {
             <Grid className="flex justify-center" container spacing={2}>
                 {loading ? <div className="pokedex-loader"></div> : <></> }
                 {pokemons.map((element: any, index: number) => 
-                    <Grid item xs={10} sm={4} md={3} >
-                        <div className="pokedex-card flex column items-center cursor-pointer">
-                            <img src={element.img_url} alt="" />
-                            <div>
-                                {element.name.toUpperCase()}
-                            </div>
-                        </div>
+                    <Grid key={element.id} item xs={6} sm={4} md={3} lg={2}>
+                        <PokemonCard pokemon={element}></PokemonCard>
                     </Grid>                
                 )}
             </Grid>

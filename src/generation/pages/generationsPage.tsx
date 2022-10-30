@@ -39,7 +39,7 @@ const GenerationsPage = () => {
         <PokedexLayout>
             <Grid className="flex justify-center" container spacing={2}>
                 {generations.map((element: any, index: number) => 
-                    <Grid item xs={10} sm={6} md={4} >
+                    <Grid key={index} item xs={10} sm={6} md={4} >
                         <Generation
                             key={index}
                             generation={element}

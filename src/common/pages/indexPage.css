@@ -458,19 +458,3 @@
     font-weight: bold;
     border-radius: 6px;
 }
-
-.flex {
-    display: flex;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.items-center {
-    align-items: center;
-}

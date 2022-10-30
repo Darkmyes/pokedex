@@ -445,6 +445,7 @@
     margin-right: 1rem !important;
     scrollbar-color: #3fc4db5e #3fc4db5e;
     scrollbar-width: auto;
+    width: 100%;
 }
 
 .pokedex-container::-webkit-scrollbar {
@@ -460,32 +461,6 @@
 .pokedex-container::-webkit-scrollbar-thumb {
     background-color: #3fc4db5e;
     outline: 1px solid #3fc4db5e;
-}
-
-
-/* COMMON */
-.flex {
-    display: flex;
-}
-
-.column {
-    flex-direction: column;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.items-center {
-    align-items: center;
-}
-
-.cursor-pointer {
-    cursor: pointer;
 }
 
 .pokedex-back-button {

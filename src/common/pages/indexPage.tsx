@@ -1,8 +1,10 @@
 import React from "react"
 import { Button, Box } from "@mui/material";
-import { Link } from "react-router-dom"
+
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 import "./indexPage.css"
+import { Link } from "react-router-dom";
 
 const IndexPage = () => {
 
@@ -33,11 +35,12 @@ const IndexPage = () => {
             </div>
             <div className="initial-hidden show-late pokedex-card">
                 <div>
-                    <h1>Pokedex Project</h1>
+                    <h1>Pokedex Demo</h1>
                 </div>
-                <div className="text-center">
-                    <b>Github</b> github.com/Darkmyes
-                </div>
+                <a href="https://github.com/Darkmyes/pokedex" className="text-center flex justify-center items-center">
+                    <GitHubIcon></GitHubIcon>
+                    Go to Repository
+                </a>
                 <br />
                 <div className="flex justify-center">
                     <Button to="/generations" component={ Link } className="pokedex-button">
