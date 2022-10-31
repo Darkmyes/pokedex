@@ -1,6 +1,8 @@
 # Pokedex Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created as a React Practice, based on the 5th generation pokedex.
+
+![descarga](https://user-images.githubusercontent.com/30057827/198908593-2104aaf9-e206-4e1a-860c-b50afd97ab4f.jpeg)
 
 ## Available Scripts
 
@@ -8,33 +10,16 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots Mobile
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![2022-10-30_18-43](https://user-images.githubusercontent.com/30057827/198908475-1e35abda-0b5b-48f5-a9a7-34e1491309c4.png)
+![2022-10-30_19-05](https://user-images.githubusercontent.com/30057827/198908587-f0c4a01c-0785-416a-b8f5-d9ccf7f79a2e.png)
+![2022-10-30_18-41](https://user-images.githubusercontent.com/30057827/198908494-04e756f2-1f25-4f2d-9042-c4c11871a546.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screenshots Desktop
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![screencapture-localhost-3000-generations-2022-10-30-18_24_34](https://user-images.githubusercontent.com/30057827/198908500-cb28dbe9-b3ba-4d2c-aa25-8353b30609eb.png)
+![050b2d1e-2307-4f84-b6fd-d9569a481bb7](https://user-images.githubusercontent.com/30057827/198908511-8abf2bda-47bd-4932-9333-630499624558.png)
+![screencapture-localhost-3000-pokemon-497-2022-10-30-18_28_47](https://user-images.githubusercontent.com/30057827/198908518-5f08acfb-8fe3-40ad-8bd9-3d92bbff8158.png)
