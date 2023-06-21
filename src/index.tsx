@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 //import reportWebVitals from './reportWebVitals';
 
 import { ThemeProvider } from '@mui/material';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 import { mainTheme } from './common/themes';
 import RouterComponent from './router';
@@ -17,11 +17,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={mainTheme}>
-      <BrowserRouter>
+      <HashRouter>
         <RouterComponent/>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider> 
   </React.StrictMode>
 );
-
-//reportWebVitals();

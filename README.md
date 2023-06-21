@@ -4,6 +4,9 @@ This project was created as a React Practice, based on the 5th generation pokede
 
 ![descarga](https://user-images.githubusercontent.com/30057827/198908593-2104aaf9-e206-4e1a-860c-b50afd97ab4f.jpeg)
 
+## Live Demo
+[Pokedex Live Demo](https://darkmyes.github.io/pokedex/)
+
 ## Available Scripts
 
 In the project directory, you can run:
